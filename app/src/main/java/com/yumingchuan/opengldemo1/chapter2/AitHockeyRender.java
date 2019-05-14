@@ -16,6 +16,16 @@ import static android.opengl.GLES20.glViewport;
  * @since 2019/5/14
  */
 public class AitHockeyRender implements GLSurfaceView.Renderer {
+
+    public AitHockeyRender() {
+        float[] tableVertices = {
+                0f, 0f,
+                0f, 14f,
+                9f, 14f,
+                9f, 0f,
+        };
+    }
+
     private static final String TAG = AitHockeyRender.class.getName();
 
     @Override
