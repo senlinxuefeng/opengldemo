@@ -1,76 +1,57 @@
 package com.yumingchuan.opengldemo1;
 
-import android.opengl.GLSurfaceView;
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
+import android.view.View;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
-import javax.microedition.khronos.egl.EGLConfig;
-import javax.microedition.khronos.opengles.GL10;
+import com.yumingchuan.opengldemo1.base.BaseActivity;
+import com.yumingchuan.opengldemo1.chapter1.Chapter1Activity;
+import com.yumingchuan.opengldemo1.chapter2.Chapter2Activity;
 
-import static android.opengl.GLES20.glClear;
-import static android.opengl.GLES20.glClearColor;
-import static android.opengl.GLES20.glViewport;
+import java.util.HashMap;
 
-public class MainActivity extends AppCompatActivity implements GLSurfaceView.Renderer {
+public class MainActivity extends BaseActivity implements View.OnClickListener {
 
     private static final String TAG = MainActivity.class.getName();
+    private TextView mChapter1;
+    private LinearLayout mChapterContainer;
+    public static HashMap<Integer, Class> mChapterList = new HashMap<>();
 
-    // Used to load the 'native-lib' library on application startup.
     static {
-        System.loadLibrary("native-lib");
+        mChapterList.put(0, Chapter1Activity.class);
+        mChapterList.put(1, Chapter2Activity.class);
     }
-
-    private GLSurfaceView mSurfaceView;
-
-    /**
-     * A native method that is implemented by the 'native-lib' native library,
-     * which is packaged with this application.
-     */
-    public native String stringFromJNI();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
         initView();
+        initListener();
     }
 
     private void initView() {
-        mSurfaceView = new GLSurfaceView(this);
-        setContentView(mSurfaceView);
-        mSurfaceView.setRenderer(this);
+        mChapterContainer = findViewById(R.id.chapter_container);
+        mChapter1 = findViewById(R.id.chapter1);
     }
 
-
-    @Override
-    public void onSurfaceCreated(GL10 gl, EGLConfig config) {
-      glClearColor(1.0f, 0.0f, 0.0f, 0.0f);
-    }
-
-    @Override
-    public void onSurfaceChanged(GL10 gl, int width, int height) {
-        glViewport(0, 0, width, height);
-    }
-
-    @Override
-    public void onDrawFrame(GL10 gl) {
-        Log.i(TAG, "onDrawFrame");
-        glClear(GL10.GL_COLOR_BUFFER_BIT);
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-        if (mSurfaceView != null) {
-            mSurfaceView.onPause();
+    private void initListener() {
+        for (int i = 0; i < mChapterContainer.getChildCount(); i++) {
+            View mView = mChapterContainer.getChildAt(i);
+            mView.setTag(i);
+            mView.setOnClickListener(this);
         }
     }
 
     @Override
-    protected void onResume() {
-        super.onResume();
-        if (mSurfaceView != null) {
-            mSurfaceView.onResume();
+    public void onClick(View v) {
+        int index = (int) v.getTag();
+        Class mClass = mChapterList.get(index);
+        if (mClass != null) {
+            Intent mIntent = new Intent(this, mClass);
+            startActivity(mIntent);
         }
     }
 }
