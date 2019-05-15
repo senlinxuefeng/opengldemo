@@ -13,6 +13,7 @@ import com.yumingchuan.opengldemo1.chapter2.Chapter2Activity;
 import com.yumingchuan.opengldemo1.chapter3.Chapter3Activity;
 import com.yumingchuan.opengldemo1.chapter4.Chapter4Activity;
 import com.yumingchuan.opengldemo1.chapter5.Chapter5Activity;
+import com.yumingchuan.opengldemo1.chapter6.Chapter6Activity;
 
 import java.util.HashMap;
 
@@ -28,6 +29,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         mChapterList.put(2, Chapter3Activity.class);
         mChapterList.put(3, Chapter4Activity.class);
         mChapterList.put(4, Chapter5Activity.class);
+        mChapterList.put(5, Chapter6Activity.class);
     }
 
     @Override

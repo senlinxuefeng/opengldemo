@@ -13,7 +13,7 @@
         android:background="@drawable/home_bg"
         android:scaleType="centerCrop" />
 
-    <ScrollView
+    <HorizontalScrollView
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:layout_gravity="bottom"
@@ -27,6 +27,6 @@
 
         </LinearLayout>
 
-    </ScrollView>
+    </HorizontalScrollView>
 
 </FrameLayout>

@@ -8,14 +8,14 @@
 
     <TextView
         android:id="@+id/chapter_name"
-        android:layout_width="wrap_content"
+        android:layout_width="80dp"
         android:layout_height="56dp"
         android:layout_marginRight="8dp"
         android:background="#80ff0000"
         android:gravity="center"
         android:paddingLeft="8dp"
         android:paddingRight="8dp"
-        android:text=""
+        android:text="第一章"
         android:textSize="18sp"
         tools:showIn="@layout/activity_main" />
 </FrameLayout>
