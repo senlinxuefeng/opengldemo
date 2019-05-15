@@ -9,6 +9,7 @@ import android.widget.TextView;
 import com.yumingchuan.opengldemo1.base.BaseActivity;
 import com.yumingchuan.opengldemo1.chapter1.Chapter1Activity;
 import com.yumingchuan.opengldemo1.chapter2.Chapter2Activity;
+import com.yumingchuan.opengldemo1.chapter3.Chapter3Activity;
 
 import java.util.HashMap;
 
@@ -22,6 +23,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     static {
         mChapterList.put(0, Chapter1Activity.class);
         mChapterList.put(1, Chapter2Activity.class);
+        mChapterList.put(2, Chapter3Activity.class);
     }
 
     @Override
