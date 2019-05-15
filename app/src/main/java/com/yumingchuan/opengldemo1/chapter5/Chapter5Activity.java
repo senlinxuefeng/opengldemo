@@ -4,7 +4,6 @@ import android.opengl.GLSurfaceView;
 import android.os.Bundle;
 
 import com.yumingchuan.opengldemo1.base.BaseActivity;
-import com.yumingchuan.opengldemo1.chapter4.AitHockeyRender;
 
 
 public class Chapter5Activity extends BaseActivity {
