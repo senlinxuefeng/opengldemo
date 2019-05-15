@@ -18,18 +18,11 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".chapter1.Chapter1Activity">
-
-        </activity>
-
-        <activity android:name=".chapter2.Chapter2Activity">
-
-        </activity>
-
-
-        <activity android:name=".chapter3.Chapter3Activity">
-
-        </activity>
+        <activity android:name=".chapter1.Chapter1Activity" />
+        <activity android:name=".chapter2.Chapter2Activity" />
+        <activity android:name=".chapter3.Chapter3Activity" />
+        <activity android:name=".chapter4.Chapter4Activity" />
+        <activity android:name=".chapter5.Chapter5Activity" />
 
     </application>
 
