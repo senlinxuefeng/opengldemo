@@ -13,14 +13,14 @@ import com.yumingchuan.opengldemo1.R;
 public class ColorShaderProgram extends ShaderProgram {
 
     private final int uMatrixLocation;
-    private final int uColorLocation;
+    private final int aColorLocation;
     private final int aPositionLocation;
 
     public ColorShaderProgram(Context context) {
         super(context, R.raw.simple_vertex_sharder_6, R.raw.simple_fragment_sharder_6);
         uMatrixLocation = GLES20.glGetUniformLocation(program, U_MATRIX);
         aPositionLocation = GLES20.glGetAttribLocation(program, A_POSITION);
-        uColorLocation = GLES20.glGetUniformLocation(program, A_COLOR);
+        aColorLocation = GLES20.glGetAttribLocation(program, A_COLOR);
     }
 
     public void setUniforms(float[] matrix) {
@@ -32,6 +32,6 @@ public class ColorShaderProgram extends ShaderProgram {
     }
 
     public int getColorLocation() {
-        return uColorLocation;
+        return aColorLocation;
     }
 }

@@ -3,6 +3,7 @@ package com.yumingchuan.opengldemo1.chapter7;
 import android.content.Context;
 import android.opengl.GLES20;
 import android.opengl.GLSurfaceView;
+import android.opengl.Matrix;
 import android.util.Log;
 
 import com.yumingchuan.opengldemo1.R;
@@ -28,8 +29,8 @@ public class AirHockeyRender implements GLSurfaceView.Renderer {
 
     private static final String TAG = AirHockeyRender.class.getName();
     private final Context context;
-    private static final float[] projectionMatrix = new float[6];
-    private static final float[] modelMatrix = new float[6];
+    private static final float[] projectionMatrix = new float[16];
+    private static final float[] modelMatrix = new float[16];
     private TextureShaderProgram textureShaderProgram;
     private ColorShaderProgram colorShaderProgram;
     private Table table;
@@ -49,6 +50,7 @@ public class AirHockeyRender implements GLSurfaceView.Renderer {
         textureShaderProgram = new TextureShaderProgram(context);
         colorShaderProgram = new ColorShaderProgram(context);
         textureID = TextureHelper.loadTexture(context, R.drawable.air_hockey_surface);
+        Matrix.setIdentityM(projectionMatrix, 0);
     }
 
     @Override

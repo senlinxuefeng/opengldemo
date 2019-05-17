@@ -33,6 +33,6 @@ public class Mallet {
     }
 
     public void draw() {
-        GLES20.glDrawArrays(GLES20.GL_TRIANGLE_FAN, 0, 2);
+        GLES20.glDrawArrays(GLES20.GL_POINTS, 0, 2);
     }
 }
