@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="56dp"
-    tools:context="com.yumingchuan.opengldemo.chapter1.Chapter1Activity">
+    tools:context="com.yumingchuan.opengldemo.listen1.Listen1Activity">
 
     <TextView
-        android:id="@+id/chapter_name"
+        android:id="@+id/listen_name"
         android:layout_width="80dp"
         android:layout_height="56dp"
         android:layout_marginRight="8dp"

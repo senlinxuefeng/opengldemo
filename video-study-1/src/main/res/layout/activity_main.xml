@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.yumingchuan.opengldemo.chapter1.Chapter1Activity">
+    tools:context="com.yumingchuan.opengldemo.listen1.Listen1Activity">
 
     <ImageView
         android:layout_width="match_parent"
@@ -20,7 +20,7 @@
         android:scrollbars="none">
 
         <LinearLayout
-            android:id="@+id/chapter_container"
+            android:id="@+id/listen_container"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal">

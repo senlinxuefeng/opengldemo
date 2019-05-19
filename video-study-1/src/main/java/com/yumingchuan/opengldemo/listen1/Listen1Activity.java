@@ -1,4 +1,4 @@
-package com.yumingchuan.opengldemo.chapter1;
+package com.yumingchuan.opengldemo.listen1;
 
 import android.opengl.GLSurfaceView;
 import android.os.Bundle;
@@ -13,9 +13,9 @@ import static android.opengl.GLES20.glClear;
 import static android.opengl.GLES20.glClearColor;
 import static android.opengl.GLES20.glViewport;
 
-public class Chapter1Activity extends BaseActivity implements GLSurfaceView.Renderer {
+public class Listen1Activity extends BaseActivity implements GLSurfaceView.Renderer {
 
-    private static final String TAG = Chapter1Activity.class.getName();
+    private static final String TAG = Listen1Activity.class.getName();
 
     private GLSurfaceView mSurfaceView;
 

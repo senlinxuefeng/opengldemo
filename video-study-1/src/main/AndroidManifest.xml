@@ -18,7 +18,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="com.yumingchuan.opengldemo.chapter1.Chapter1Activity" />
+        <activity android:name="com.yumingchuan.opengldemo.listen1.Listen1Activity" />
     </application>
 
 </manifest>
