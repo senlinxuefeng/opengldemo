@@ -1,4 +1,4 @@
-package com.yumingchuan.opengldemo1;
+package com.yumingchuan.opengldemo;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,15 +7,8 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.yumingchuan.opengldemo1.base.BaseActivity;
-import com.yumingchuan.opengldemo1.chapter1.Chapter1Activity;
-import com.yumingchuan.opengldemo1.chapter2.Chapter2Activity;
-import com.yumingchuan.opengldemo1.chapter3.Chapter3Activity;
-import com.yumingchuan.opengldemo1.chapter4.Chapter4Activity;
-import com.yumingchuan.opengldemo1.chapter5.Chapter5Activity;
-import com.yumingchuan.opengldemo1.chapter6.Chapter6Activity;
-import com.yumingchuan.opengldemo1.chapter7.Chapter7Activity;
-import com.yumingchuan.opengldemo1.chapter8.Chapter8Activity;
+import com.yumingchuan.opengldemo.base.BaseActivity;
+import com.yumingchuan.opengldemo.chapter1.Chapter1Activity;
 
 import java.util.HashMap;
 
@@ -27,13 +20,6 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
     static {
         mChapterList.put(0, Chapter1Activity.class);
-        mChapterList.put(1, Chapter2Activity.class);
-        mChapterList.put(2, Chapter3Activity.class);
-        mChapterList.put(3, Chapter4Activity.class);
-        mChapterList.put(4, Chapter5Activity.class);
-        mChapterList.put(5, Chapter6Activity.class);
-        mChapterList.put(6, Chapter7Activity.class);
-        mChapterList.put(7, Chapter8Activity.class);
     }
 
     @Override

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="56dp"
+    tools:context="com.yumingchuan.opengldemo.chapter1.Chapter1Activity">
+
+    <TextView
+        android:id="@+id/chapter_name"
+        android:layout_width="80dp"
+        android:layout_height="56dp"
+        android:layout_marginRight="8dp"
+        android:background="#80ff0000"
+        android:gravity="center"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:text="第一章"
+        android:textSize="18sp"
+        tools:showIn="@layout/activity_main" />
+</FrameLayout>

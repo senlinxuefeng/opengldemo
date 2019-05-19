@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.yumingchuan.opengldemo1">
+    package="com.yumingchuan.opengldemo">
 
     <application
         android:allowBackup="true"
@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
 
-        <activity android:name=".MainActivity">
+        <activity android:name="com.yumingchuan.opengldemo.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -18,14 +18,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".chapter1.Chapter1Activity" />
-        <activity android:name=".chapter2.Chapter2Activity" />
-        <activity android:name=".chapter3.Chapter3Activity" />
-        <activity android:name=".chapter4.Chapter4Activity" />
-        <activity android:name=".chapter5.Chapter5Activity" />
-        <activity android:name=".chapter6.Chapter6Activity" />
-        <activity android:name=".chapter7.Chapter7Activity" />
-        <activity android:name=".chapter8.Chapter8Activity" />
+        <activity android:name="com.yumingchuan.opengldemo.chapter1.Chapter1Activity" />
     </application>
 
 </manifest>
